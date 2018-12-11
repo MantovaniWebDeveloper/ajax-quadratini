@@ -11,25 +11,28 @@ $(document).ready(function(){
     //richiamo il this dal principio perchè se no si perde
     var thisQuadratoScelto = $(this);
     //alert("esisto");
-    //invoco la chiamata
-    $.ajax({
-      url: "https://www.boolean.careers/api/random/int",
-      method: "GET",
-      success: function(data,stato){
-        console.log(data.response);
-        var risultatoChiamata = data.response;
-        //setto lo sfondo in base al valore restituito dalla chiamata
-        if(risultatoChiamata <= 5){
-          console.log($(this));
-          thisQuadratoScelto.css("background-color", "yellow")
-        } else {
-          thisQuadratoScelto.css("background-color", "green")
+      $.ajax({
+        url: "https://www.boolean.careers/api/random/int",
+        method: "GET",
+        success: function(data,stato){
+          console.log(data.response);
+          var risultatoChiamata = data.response;
+          //setto lo sfondo in base al valore restituito dalla chiamata
+          if(risultatoChiamata <= 5){
+            console.log($(this));
+            thisQuadratoScelto.css("background-color", "yellow");
+            thisQuadratoScelto.html(risultatoChiamata);
+          } else {
+            thisQuadratoScelto.css("background-color", "green")
+            thisQuadratoScelto.html(risultatoChiamata);
+          }
+        },
+        error: function(richiesta,stato,errori){
+          console.log("c'è stato un errore " + errori);
         }
-      },
-      error: function(richiesta,stato,errori){
-        console.log("c'è stato un errore " + errori);
-      }
-    });
+      });
+    //invoco la chiamata
+
   });
 
 
