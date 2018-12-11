@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 700px;
+  background-color: red;
+}
+#griglia {
+  width: 80%;
+  height: 80%;
+  background-color: blue;
+}
