@@ -4,23 +4,18 @@
   box-sizing: border-box;
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   margin: 0 auto;
-  height: 700px;
+  height: 800px;
   background-color: red;
 }
 #griglia {
-  width: 80%;
-  height: 80%;
-  background-color: blue;
+  display: none;
 }
 .quadrato {
   float: left;
-  height: 100px;
+  height: calc(100% / 6);
   width: calc(100% / 6);
-  background-color: yellow;
+  background-color: green;
   border: 1px solid white;
 }
