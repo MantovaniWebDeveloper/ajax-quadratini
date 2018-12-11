@@ -15,7 +15,13 @@ $(document).ready(function(){
       method: "GET",
       success: function(data,stato){
         console.log(data.response);
-
+        var risultatoChiamata = data.response;
+        if(risultatoChiamata <= 5){
+          console.log($(this));
+          $(this).css("background-color", "yellow")
+        } else {
+          $(this).css("background-color", "yellow")
+        }
       },
       error: function(richiesta,stato,errori){
         console.log("c'è stato un errore " + errori);
