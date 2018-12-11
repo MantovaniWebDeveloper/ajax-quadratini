@@ -8,6 +8,8 @@ $(document).ready(function(){
   }
   //gestisco il click sul quadrato
   $('.quadrato').click(function(){
+    //richiamo il this dal principio perchè se no si perde
+    var thisQuadratoScelto = $(this);
     //alert("esisto");
     //invoco la chiamata
     $.ajax({
@@ -16,11 +18,12 @@ $(document).ready(function(){
       success: function(data,stato){
         console.log(data.response);
         var risultatoChiamata = data.response;
+        //setto lo sfondo in base al valore restituito dalla chiamata
         if(risultatoChiamata <= 5){
           console.log($(this));
-          $(this).css("background-color", "yellow")
+          thisQuadratoScelto.css("background-color", "yellow")
         } else {
-          $(this).css("background-color", "yellow")
+          thisQuadratoScelto.css("background-color", "green")
         }
       },
       error: function(richiesta,stato,errori){
