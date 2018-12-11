@@ -25,11 +25,3 @@
   font-size: 30px;
   font-weight: 500;
 }
-.quadratoGiallo {
-  float: left;
-  height: calc(100% / 6);
-  width: calc(100% / 6);
-  background-color: yellow;
-  border: 1px solid white;
-  cursor: pointer;
-}

@@ -11,6 +11,7 @@ $(document).ready(function(){
     //richiamo il this dal principio perchè se no si perde
     var thisQuadratoScelto = $(this);
     //alert("esisto");
+    //invoco la chiamata
       $.ajax({
         url: "https://www.boolean.careers/api/random/int",
         method: "GET",
@@ -31,7 +32,6 @@ $(document).ready(function(){
           console.log("c'è stato un errore " + errori);
         }
       });
-    //invoco la chiamata
 
   });
 
